@@ -88,7 +88,7 @@ class DHT11(object):
                 total = self.humidity + self.temperature
                 # is checksum ok ?
                 if not (total & 255) == self.checksum:
-                    raise
+                    self.checksum = 256
         elif 16 <= self.bit < 24: # in temperature byte
             self.temperature = (self.temperature << 1) + val
         elif 0 <= self.bit < 8: # in humidity byte
