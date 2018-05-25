@@ -20,8 +20,6 @@ def ring(GPIO, level, tick):
 	call(['mpg123', '-q', 'doorbell-1.mp3'])
 	time.sleep(1)
 	call(['aplay', '-q', 'patyell.wav'])
-	# message = {'date': lt}
-	# r = requests.post('https://hooks.zapier.com/hooks/catch/3260910/fnmj4n/silent/', data=message)
 	BODY = '\r\n'.join(['To: %s' % gtest.TO,
                     'From: %s' % gtest.gmail_sender,
                     'Subject: %s' % gtest.SUBJECT,
@@ -37,7 +35,7 @@ try:
 	while True:
 		sensor.read()
 		data = time.asctime().split()
-		data.extend([sensor.temperature,sensor.humidity, "Current temp/hum"])
+		data.extend([sensor.temperature, sensor.humidity, "Current temp/hum"])
 		wks.append_row(data)
 		time.sleep(900)
 except KeyboardInterrupt:

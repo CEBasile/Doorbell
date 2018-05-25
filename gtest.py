@@ -15,13 +15,13 @@ def connect_gs():
 		credentials = ServiceAccountCredentials.from_json_keyfile_name(api_key, scope)
 		gc = gspread.authorize(credentials)
 		return gc.open("temphum").sheet1
-	except:
-		print("Couln't connect to Google Sheet")
+	except Exception as err:
+		print("Google sheet error: {0}".format(err))
 
 def connect_ge():
 	try:
 		server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 		server.login(gmail_sender, gmail_passwd)
 		return server
-	except:
-		print ("Couldn't connect to Google Mail")
+	except Exception as err:
+		print("Google mail error: {0}".format(err))
