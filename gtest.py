@@ -3,12 +3,12 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 scope = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
-api_key = 'doorbell-198222-d6d70f86b538.json'
+api_key = 'your-private-key.json'
 
-TO = '6143615267@messaging.sprintpcs.com'
+TO = '##########@messaging.sprintpcs.com'
 SUBJECT = 'Your Doorbell'
-gmail_sender = 'door4basile@gmail.com'
-gmail_passwd = 'Bell4door' 
+gmail_sender = ''
+gmail_passwd = '' 
 
 def connect_gs():
 	try:
