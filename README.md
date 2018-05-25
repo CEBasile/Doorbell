@@ -4,10 +4,10 @@ Raspberry Pi 0 W integrated doorbell using Python and Adafruit parts integrated 
 
 ## Getting Started
 
--doorbell.py - main program
--data_mon.py - measures temperature and humidity every 15 minutes
--gtest.py    - api interfaces
--systemd     - deamonize the scripts
+- doorbell.py - main program
+- data_mon.py - measures temperature and humidity every 15 minutes
+- gtest.py    - api interfaces
+- systemd     - deamonize the scripts
 
 ### Prerequisites
 
